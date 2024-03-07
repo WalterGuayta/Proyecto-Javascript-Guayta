@@ -20,7 +20,9 @@ const carritoVacio = document.querySelector('.cart-empty');
 
 const totalCarrito = document.querySelector('.cart-total');
 
-let botonVaciarCarrito = document.querySelector('btn-vaciar');
+let vaciarCarrito = document.querySelector('btn-vaciar');
+
+let confirmarCompra =document.querySelector("confirmar")
 
 
 listaProductos.addEventListener('click', e => {
@@ -82,11 +84,13 @@ const showHTML = () => {
 		totalCarrito.classList.remove('hidden');
 	}
 
+
 	// Limpiar HTML
 	filaProductos.innerHTML = '';
 
 	let total = 0;
 	let totalOfProducts = 0;
+
 
 	totalProductos.forEach(product => {
 		const containerProduct = document.createElement('div');
@@ -124,3 +128,13 @@ const showHTML = () => {
 	valorTotal.innerText = `$${total}`;
 	contadorProductos.innerText = totalOfProducts;
 };
+
+confirmarCompra.addEventListener("click", (e)=>{
+	console.log("Gracias por su Compra")
+})
+
+
+ 
+	
+
+	
